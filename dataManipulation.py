@@ -2,7 +2,7 @@
 # |              dataManipulaion.py          |
 # --------------------------------------------
 #
-# The purpose of this program is to transform excel data extracted from MT4 into various purposes.
+# The purpose of this program is to transform excel data extracted from MT4.
 # We can repurpose sections of this code into individual .py files for organization and utility.
 
 # Task 1: Two-line cross confirmation indicator - Pips gained
@@ -15,15 +15,6 @@
 # TODO: a) This is columns B and C
 # TODO: b) We take the value of close (column A) and sum those values together where the condition=True
 # TODO: c) use Numpy to return arrays for the columns
-
-import numpy as np
-import pandas as pd
-df1 = pd.read_csv('C:/users/grego/desktop/test.csv', usecols=[1], encoding='utf-8')
-df2 = pd.read_csv('C:/users/grego/desktop/test.csv', usecols=[2], encoding='utf-8')
-indShort = df1.to_numpy()
-indLong = df2.to_numpy()
-
-# TODO: Now we need to iterate over each value in the numpy array
 
 import pandas as pd
 
@@ -46,53 +37,14 @@ while x < 9:
         print("False")
     x += 1
 
-# Consider having a sum total column with a multiplier of 0 or 1.
-# This is a continuation check. 1 continues, 0 breaks.
-# May be an issue as still calculates from top value
-# TODO: Try to append values to an empty list that divides in sections
-
-# Progress:
-
-import pandas as pd
-
-df1 = pd.read_csv('C:/users/grego/desktop/test.csv', usecols=[1], encoding='utf-8')
-df2 = pd.read_csv('C:/users/grego/desktop/test.csv', usecols=[2], encoding='utf-8')
-short = df1.values.tolist()
-long = df2.values.tolist()
-print(short)
-print(long)
-
-id = []
-x = 0
-y = 1
-while x < len(short):
-    sValue = short[x]
-    lValue = long[x]
-    if sValue > lValue:
-        id.append(y)
-    else:
-        id.append(0)
-        y += 1
-    x += 1
-
-print(id)
-
-# Output:
-
-# [[3], [2], [1], [-1], [-2], [-3], [3], [2], [1]]
-# [[-3], [-2], [-1], [1], [2], [3], [-3], [-2], [-1]]
-# [1, 1, 1, 0, 0, 0, 4, 4, 4]
-
-# TODO: Now we can identify each section by individual number
-# TODO: For future, try to see if we can increment in series
-#
+# Result: [1, 1, 1, 0, 0, 0, 4, 4, 4]
+# This identifies each true section individually and all false sections
+# TODO: For future, try to see if we can increment in series (0, 1, 2)
 
 s = pd.Series(id)
-
 s.to_csv('C:/users/grego/desktop/test1.csv', 'columns=2')
-
-# TODO: Remember to always save to a new file for now, so we don't overwrite our original data
-
+# Remember to always save to a new file for now, so we don't overwrite our
+# original data
 # TODO: Return identifier as a separate workbook
 
 import pandas as pd

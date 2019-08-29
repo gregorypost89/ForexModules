@@ -112,7 +112,7 @@ MetaTrader4 is a trading platform that works in conjunction with many major
    
 ![mt4example](mt4example.png)
 
-Lets break down what we see here:
+
 
 - The Data Window: 
 
@@ -155,7 +155,9 @@ A major challenge I encountered was not being able to retrieve indicator data
   information, but doesn't seem to include options for including and
    calculating indicator data.  
    
-   There were two options I considered at this time:
+   There are two ways I decided to approach this, the first via Black Box
+    Testing and the second through White Box Testing.  These methods
+    respectively are as follows:
    
    1. Create a module using PyAutoGUI to cycle through each bar, copy the
     data and paste it into a blank worksheet.  This is simpler and doesn't
@@ -182,8 +184,20 @@ I decided that a mix of the two was the best approach, as I needed to collect
   - The second method
   requires multiple different modules, as each indicator has different
    methods of calculation and therefore different code structure.  A 
-    schedule will be posted to this repository listing current and future
-     projects to be worked on.
+    schedule of upcoming projects will be posted to this repository in the
+     future.  
+     
+     **continuationTrade.py**, also located in this repository, is an example
+      of this method and is my first attempt at writing a module dependent on
+       the indicator's code.
+       
+As of this posting, the output of my White Box Testing module unfortunately does
+ not match the output of my indicator results on MetaTrader 4.  
+ 
+ However, it
+  is clear that a two-pronged approach using both methods is necessary, as I
+   need to compare my white box data against some black box data for accuracy
+   , and see what margin of error (if any) is acceptable.
      
 ## What's next?
 
@@ -208,9 +222,10 @@ I decided that a mix of the two was the best approach, as I needed to collect
        Baseline **only when** it is also used as an Exit Indicator
        )  
        
-     Therefore, future modules should address these parameters and analyze
+     *Therefore, future modules should address these parameters and
+      analyze
       not only what works best, but where it does relative to the algorithmic
-       structure and to other indicators used as part of this.
+       structure and to other indicators used in the algorithm.*
      
 - News events impact trade entries and exits.  This structure is heavily
  trend-based, as we are looking for patterns in data to determine future
@@ -231,4 +246,20 @@ I decided that a mix of the two was the best approach, as I needed to collect
       and as we can see, even the experts don't have an exact reason as to
        why this particular situation occurred.
        
-         
+    *Modules should include a calendar of events where appropriate to account
+     for outliers and detail the degree of influence and action taken.*
+     
+ - Risk Management is essential in this trading structure.  It determines
+  position size when entering trades, and includes safety measures to exit
+   that trade if certain conditions occur.
+   
+   A stop loss is always put into place when entering a trade.  This always
+    starts off at (ATR * 1.5). If the position in the trade reaches a certain
+     level in the direction of that trade (ATR * 1), we move that stop loss to
+      **break
+      even**, which is the position where we originally entered the trade.  
+      
+      **Example:**  I enter a long AUD/JPY at 78.100 pips. The ATR that day
+       is .300 
+       
+      Take profit = (78.100 + (.300 * 1.5 )) (78.100 + )

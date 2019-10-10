@@ -2,6 +2,7 @@
   <dictionary name="grego">
     <words>
       <w>backtesting</w>
+      <w>oanda</w>
       <w>pyautogui</w>
     </words>
   </dictionary>

@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="061878da-c7e9-4717-b5d3-124a0d382f10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/averageTrueRange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chaikinMoneyFlow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indicatorShortAndLong.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indicatorsToCSV.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simpleMovingAverage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/grego.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/grego.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -25,7 +31,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/seabornDistPlot.py" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.seabornDistPlot">
+  <component name="RunManager" selected="Python.indicatorShortAndLong">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Forex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,6 +117,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="indicatorShortAndLong" type="PythonConfigurationType" factoryName="Python">
+      <module name="Forex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/indicatorShortAndLong.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="seabornDistPlot" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Forex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,6 +161,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.dataScraping" />
+      <item itemvalue="Python.indicatorShortAndLong" />
       <item itemvalue="Python.graphExample" />
       <item itemvalue="Python.seabornDistPlot" />
     </list>
@@ -169,7 +198,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566922765900</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated README.md, added continuationTrade.py(incomplete), added audnzd.csv as sample data for future modules.">
+      <created>1567095186402</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567095186402</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated README.md, added continuationTrade.py(incomplete), added audnzd.csv as sample data for future modules.">
+      <created>1567095241209</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567095241209</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated README.md, added continuationTrade.py(incomplete), added audnzd.csv as sample data for future modules.">
+      <created>1567095250259</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567095250259</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +239,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Added exampleGraph.png" />
     <MESSAGE value="Updated README.md, cleaned graphExample.py, general cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md, cleaned graphExample.py, general cleanup" />
+    <MESSAGE value="Updated README.md, added continuationTrade.py(incomplete), added audnzd.csv as sample data for future modules." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md, added continuationTrade.py(incomplete), added audnzd.csv as sample data for future modules." />
   </component>
 </project>

@@ -4,21 +4,21 @@
 This is a collection of various modules that I use for procuring data relevant 
 to the foreign exchange market, commonly referred to as forex. 
 
-Currencies are traded in pairs, for
+Currencies are traded in pairs. For
 example the US Dollar against the Japanese Yen would be represented as 
-USD/JPY). 
+USD/JPY. 
 
 Currency pairs are traded in lots, in which you can enter either a short or
 long position.  Using USD/JPY as our example, if I wanted to enter a trade
 on the premise that USD would appreciate in value relative to JPY, I would
 go **long**. Conversely, I would go **short** if the opposite were true.
    
-Lot size as of right now is not relevant to any posted modules.  This may be
+As of right now, lot size is not relevant to any posted modules.  This may be
  a consideration for future projects as it relates to money management and
   risk profile situations, but the primary focus will be on **backtesting**
   
-  All of my backtesting and results are based on the **daily** timeframe
-  .  All definitions will be referenced as such.
+  All of my backtesting and results are based on the **daily** time frame.
+  All definitions will be referenced as such.
 ## How does backtesting work?
 
 Backtesting is where I analyze the history of multiple different currency
@@ -249,17 +249,3 @@ As of this posting, the output of my White Box Testing module unfortunately does
     *Modules should include a calendar of events where appropriate to account
      for outliers and detail the degree of influence and action taken.*
      
- - Risk Management is essential in this trading structure.  It determines
-  position size when entering trades, and includes safety measures to exit
-   that trade if certain conditions occur.
-   
-   A stop loss is always put into place when entering a trade.  This always
-    starts off at (ATR * 1.5). If the position in the trade reaches a certain
-     level in the direction of that trade (ATR * 1), we move that stop loss to
-      **break
-      even**, which is the position where we originally entered the trade.  
-      
-      **Example:**  I enter a long AUD/JPY at 78.100 pips. The ATR that day
-       is .300 
-       
-      Take profit = (78.100 + (.300 * 1.5 )) (78.100 + )
